@@ -1,0 +1,30 @@
+//Yadgir Zuveria Salim. 
+//UIN:241A047. 
+/*WAP to find if entered number is 
+even or odd.*/ 
+#include <stdio.h> 
+int main() { 
+printf("***EVEN AND ODD FINDER!*** \n"); 
+int num; 
+printf("Enter an integer: \n"); 
+scanf("%d", &num); 
+printf("Entered number is:%d\n", num); 
+if(num % 2 == 0) 
+printf("%d is an even number.", num); 
+else 
+printf("%d is an odd number.", num); 
+return 0;} 
+//output 
+/* 
+***EVEN AND ODD FINDER!***  
+Enter an integer:  
+2 
+Entered number is:2 
+2 is an even number . */ 
+//other case 
+/* 
+***EVEN AND ODD FINDER!***  
+Enter an integer:  
+19 
+Entered number is:19 
+19 is an odd number . */
