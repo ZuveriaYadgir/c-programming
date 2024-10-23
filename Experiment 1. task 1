@@ -1,0 +1,20 @@
+//Yadgir Zuveria Salim. 
+//UIN:241A047 
+/*WAP to print your name, age, class, division and UIN on the 
+screen. Use escape sequences to properly format the output.*/ 
+#include <stdio.h> 
+int main() 
+{printf("Full Name\t :Yadgir Zuveria Salim.\n"); 
+printf("Age\t\t\t :18 years.\n"); 
+printf("Class\t\t :FE AI&DS.\n"); 
+printf("Div\t\t\t :A.\n"); 
+printf("UIN\t\t\t :241A047.\n"); 
+return 0;} 
+//output. 
+/* 
+Full Name  :Yadgir Zuveria Salim. 
+Age        :18 years. 
+Class      :FE AI&DS.
+Div        :A. 
+UIN        :241A047.
+*/
