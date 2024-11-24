@@ -1,0 +1,31 @@
+/*Aim : WAP to find the Largest element in an array.
+Name : Yadgir Zuveria Salim
+Roll no : 39
+UIN : 241A047*/
+#include<stdio.h>
+int main()
+{
+    int n,i,a[100],large; //Integer Array of size 100
+    printf("Enter the number of elements = ");
+    scanf("%d",&n);
+
+    for(i=0;i<=n-1;i++)
+    { printf("Enter a value = ");
+        scanf("%d",&a[i]);}
+    large=a[0];
+    for(i=1;i<=n-1;i++)
+    {if(large<a[i])
+            large=a[i]; }
+    printf("\nLargest Number is = %d",large);
+    return 0;}
+    /*
+    Enter the number of elements = 6
+Enter a value = 12
+Enter a value = 67
+Enter a value = 908
+Enter a value = 7
+Enter a value = 54
+Enter a value = 100
+
+Largest Number is = 100
+*/
