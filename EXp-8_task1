@@ -1,0 +1,23 @@
+/*Aim : WAP to find the length of a string without using library function.
+Name : Yadgir Zuveria Salim
+Roll no : 39
+UIN : 241A047*/
+#include<stdio.h>
+int main()
+{
+    char str[100];
+    int length=0;   //variable
+    printf("\t\t*** String Length Finder ***\n\n\n");
+    printf("Enter Your String : ");
+    gets(str);
+    while(str[length] !='\0')
+    {length++;}
+
+    printf("string length: %d Characters",length);
+    return 0;}
+/*
+
+*** String Length Finder ***
+Enter Your String : hello world
+string length: 11 Characters
+*/
