@@ -1,0 +1,203 @@
+//Name: Yadgir Zuveria Salim
+//rollno:39
+//uin:241A047
+/* Write a C program to convert specified days into years, weeks and
+days. Write an algorithm & draw a flowchart for the same.*/
+#include <stdio.h>
+int main() {
+int days, years, weeks, numofdays;
+// Ask user for input
+printf("Enter the number of days: ");
+scanf("%d", & numofdays);
+years = numofdays / 365;
+weeks = (numofdays % 365) / 7;
+days = ( numofdays % 365) % 7;
+// Output the result
+printf("Number of days:%d \n" , numofdays );
+printf("Years:%d \n" , years);
+printf("Weeks:%d \n" ,weeks );
+printf("Days:%d \n" ,days );
+return 0;}
+/*
+***---out-put---***
+Enter the number of days: 1329
+Number of days:1329
+Years:3
+Weeks:33
+Days:3
+*/
+//Name: Yadgir Zuveria Salim
+//rollno:39
+//uin:241A047
+/*Write a C program to calculate salary of an employee with name.
+Write an algorithm & draw a flowchart for the same.*/
+#include <stdio.h>
+int main() {
+char name[100];
+float basicSalary, hra, da, pf, grossSalary;
+// Input employee details
+printf("Enter name: ");
+scanf("%s", name);
+printf("Enter Basic Salary: ");
+scanf("%f", &basicSalary);
+printf("Enter HRA: ");
+scanf("%f", &hra);
+printf("Enter D.A.: ");
+scanf("%f", &da);
+// Calculate Provident Fund (PF) as 12% of the basic salary
+pf = 0.12 * basicSalary;
+// Calculate gross salary
+grossSalary = basicSalary + hra + da + pf;
+// Output the details
+printf("\nName: %s", name);
+printf("BASIC: %.6f\n", basicSalary);
+printf("HRA: %.6f\n", hra);
+printf("DA: %.6f\n", da);
+printf("PF: %.6f\n", pf);
+printf("***GROSS SALARY: %.6f ***\n", grossSalary);
+return 0;}
+/* ----output----
+Enter name: Mike
+Enter Basic Salary: 23000
+Enter HRA: 9500
+Enter D.A.: 9500
+Name: Mike
+BASIC: 23000.000000
+HRA: 9500.000000
+DA: 9500.000000
+PF: 2760.000000
+***GROSS SALARY: 44760.000000 ***
+*/
+//Name: Yadgir Zuveria Salim
+//rollno:39
+//uin:241A047
+/*Write a C program to read age of 15 person and count total Baby
+age,
+School age and adult age. (Hint: While loop) */
+#include <stdio.h>
+int main(){
+int age;
+int babyCount = 0, schoolAgeCount = 0, adultCount = 0;
+int i = 0;
+while (i <15) {
+printf("Enter the age of person [%d]: ", i + 1);
+scanf("%d", &age);
+if (age <= 3) {
+babyCount++;}
+else if (age >= 4 && age <= 16)
+{schoolAgeCount++;}
+else {adultCount++;}
+i++; }
+printf("\nBaby age: %d\n", babyCount);
+printf("School age: %d\n", schoolAgeCount);
+printf("Adult age: %d\n", adultCount);
+return 0;}
+/*
+Enter the age of person [1]: 0
+Enter the age of person [2]: 1
+Enter the age of person [3]: 2
+Enter the age of person [4]: 3
+Enter the age of person [5]: 44
+Enter the age of person [6]: 55
+Enter the age of person [7]: 66
+Enter the age of person [8]: 44
+Enter the age of person [9]: 12
+Enter the age of person [10]: 13
+Enter the age of person [11]: 14
+Enter the age of person [12]: 55
+Enter the age of person [13]: 66
+Enter the age of person [14]: 18
+Enter the age of person [15]: 19
+Baby age: 4
+School age: 3
+Adult age: 8*/
+/*Write a C program to print the following Pyramid:*/
+#include <stdio.h>
+int main() {
+int i, j, rows = 5;
+for(i = 1; i <= rows; i++) {
+for(j = 1; j <= i; j++) {
+printf("*"); }
+printf("\n"); }
+return 0;}
+/* --out-put--
+*
+**
+***
+****
+*****
+*/
+//Name: Yadgir Zuveria Salim
+//rollno:39
+//uin:241A047
+/*Write a C program to print Fibonacci series using recursion.*/
+#include <stdio.h>
+int fibonacci(int n) {
+if (n == 0) {
+return 0;
+} else if (n == 1) {
+return 1;
+} else {
+return fibonacci(n - 1) + fibonacci(n - 2); } }
+int main() {
+int terms, i;
+// Ask the user to enter the number of terms
+printf("Enter total number of terms: ");
+scanf("%d", &terms);
+printf("Fibonacci series is: ");
+// Loop through the range and print Fibonacci numbers
+for (i = 0; i < terms; i++) {
+printf("%d ", fibonacci(i)); }
+printf("\n");
+return 0;}
+/* Enter total number of terms: 10
+Fibonacci series is: 0 1 1 2 3 5 8 13 21 34
+*/
+//Name: Yadgir Zuveria Salim
+//rollno:39
+//uin:241A047
+/*Write a C program that defines functions to perform the following
+tasks:
+1. Create a function to calculate the area of a rectangle. The
+function should take the length and width as input and return the
+area.
+2. Create a function to calculate the area of a circle. The function
+should take the radius as input and return the area. (Use the value
+of pi as 3.14159).
+3. Create a function to calculate the area of a triangle. The
+function should take the base and height as input and return the
+area.
+4. The program should:
+o Prompt the user to select which geometric shape's area they
+would like to calculate.
+o Based on the user's selection, the program should call the
+appropriate function and display the result.
+*/
+#include <stdio.h>
+// Function to calculate the area of a rectangle
+float rectangleArea(float length, float width) {
+return length * width;
+}
+// Function to calculate the area of a circle
+float circleArea(float radius) {
+const float PI = 3.14159;
+return PI * radius * radius;
+}
+// Function to calculate the area of a triangle
+float triangleArea(float base, float height) 
+area = triangleArea(base, height);
+printf("The area of the triangle is: %.2f\n", area);
+break;
+default:
+printf("Invalid choice! Please select a valid option (1/2/3).\n");
+}
+return 0; }
+/*
+Select a shape to calculate its area:
+1. Rectangle
+2. Circle
+3. Triangle
+Enter your choice (1/2/3): 1
+Enter length and width of the rectangle: 5 3
+The area of the rectangle is: 15.00
+*/
