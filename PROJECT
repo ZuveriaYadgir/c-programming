@@ -1,0 +1,67 @@
+/* GROUP: 9
+MEMBERS:2
+CLASS: FE(AI&DS) */
+/*Name :Yadgir Zuveria Salim.
+UIN: 241A047
+ROLLNO:39 */
+/*Sankpal Sanchita Shivaji.
+UIN: 241A023
+ROLLNO:22 */
+// NUMBER GUESSING GAME
+/* Description: A simple number guessing game where the computer randomly selects a
+number within a certain range (1 t0 100) , and the player must guess it.
+Features:
+Generate a random number.
+Prompt the player to enter guesses.
+Provide hints such as "higher" or "lower" after each guess.
+Keep track of the number of guesses and display a congratulatory message when
+the correct number is guessed.*/
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+//TO PRINT NAME:
+printf("\t\t\t**--NUMBER GUESSING GAME!--**\n");
+//VARIABLE DECLARATION:
+const int lowest_num=1;
+const int highest_num=100 ;
+int guess=0 ;
+int guesses=0;
+int ans=0;
+//generate a random number between lowest_num and highest_num.
+ans = (rand() % highest_num) + lowest_num;
+do{
+printf("Enter the number:");
+scanf("%d", &guess);
+if(guess > ans)
+{ printf("Too high! Enter the smaller number please.\n");}
+else if(guess < ans)
+{printf("Too low! Enter the greater numbere please.\n"); }
+else{ printf("CONGRATULATIONS!! correct number guessed.\n"); }
+guesses++; }
+while(guess != ans);
+printf("**********************\n");
+printf("answer: %d\n", ans);
+printf("guesses: %d\n", guesses);
+printf("**********************");
+return 0;}
+/* ----OUTPUT----
+**--NUMBER GUESSING GAME!--**
+Enter the number:50
+Too low! Enter the greater numbere please.
+Enter the number:90
+Too high! Enter the smaller number please.
+Enter the number:80
+Too low! Enter the greater numbere please.
+Enter the number:85
+Too high! Enter the smaller number please.
+Enter the number:82
+Too low! Enter the greater numbere please.
+Enter the number:83
+Too low! Enter the greater numbere please.
+Enter the number:84
+CONGRATULATIONS!! correct number guessed.
+**********************
+answer: 84
+guesses: 7
+**********************
