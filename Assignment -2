@@ -1,0 +1,38 @@
+int vowels = 0, consonants = 0;
+// Input string
+printf("Enter a string: ");
+fgets(str, sizeof(str), stdin); // Use fgets to handle spaces
+// Call the function to count vowels and consonants
+countVowelsConsonants(str, &vowels, &consonants);
+// Display the results
+printf("Total number of VOWELS: %d, CONSONANTS: %d\n", vowels,
+consonants);
+return 0;}
+/*Enter a string: This is a test string
+Total number of VOWELS: 5, CONSONANTS: 12
+*/
+//Yadgir Zuveria
+//Rollno:39
+//UIN:241A047
+/*C program to check a specified file exists or not*/
+#include <stdio.h>
+int main() {
+char filename[100];
+FILE *file;
+// Input the filename to check
+printf("Enter the filename to check: ");
+scanf("%s", filename);
+// Try to open the file in read mode
+file = fopen(filename, "r");
+if (file) {
+// If file is opened successfully, it exists
+printf("File exists.\n");
+fclose(file); // Close the file
+} else {
+// If file cannot be opened, it doesn't exist
+printf("File does not exist.\n");
+}
+return 0;}
+/*
+Enter the filename to check:
+File does exist. */
